@@ -1,4 +1,3 @@
-FROM openjdk:17-ea-11-jdk-slim
-VOLUME /tmp
+FROM openjdk:11
 COPY target/order-service-0.0.1-SNAPSHOT.jar order-service.jar
-ENTRYPOINT ["java", "-jar", "order-service.jar"]
+ENTRYPOINT ["java", "-jar", "order-service.jar", "-encoding", "utf-8"]
